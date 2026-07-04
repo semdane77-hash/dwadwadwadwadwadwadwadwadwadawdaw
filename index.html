@@ -241,9 +241,9 @@
     </div>
 
     <script>
-        // تكوين الـ Firebase (تأكد أن البيانات تطابق مشروعك)
+      // تكوين الـ Firebase الصحيح والمربوط بقاعدتك الحالية
         const firebaseConfig = {
-            databaseURL: "https://banned-team-1-default-rtdb.firebaseio.com/"
+            databaseURL: "https://banned-8d33b-default-rtdb.firebaseio.com/"
         };
         firebase.initializeApp(firebaseConfig);
         const database = firebase.database();
@@ -259,7 +259,6 @@
                     if (data.title) document.getElementById('mainTitle').innerText = data.title;
                     if (data.subtitle) document.getElementById('mainSubtitle').innerText = data.subtitle;
                 }
-                // إجبار التعديل على الحقول حسب وضع الإدارة الحالي
                 setEditable(isEditMode);
             });
         };
@@ -267,7 +266,6 @@
         // دالة التحكم بوضع الإدارة وحفظ البيانات
         function handleAdminMode() {
             const btn = document.getElementById('adminToggleBtn');
-            // كلمة السر المعقدة والجديدة لحماية السيرفر بالكامل
             const SECURE_PASSWORD = `aaxsssaolofll?>birpposa0*&6887xz7729087x7/)%%%@CXMJHLJj!~~--`;
 
             if (!isEditMode) {
